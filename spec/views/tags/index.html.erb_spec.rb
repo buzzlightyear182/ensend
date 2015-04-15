@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe "tags/index", type: :view do
   before(:each) do
     assign(:tags, [
-      Tag.create!(),
-      Tag.create!()
+      create(:tag),
+      create(:tag, {name: "Just another tag", category_id: Category.first.id })
     ])
   end
 
