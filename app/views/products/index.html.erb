@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
 <h1>Listing Products</h1>
-
+<% if current_user.roles == "admin" %>
+<%= link_to 'New Product', new_product_path, :class => "btn btn-primary"  %>
+<% end %>
 <table class="table table-striped">
   <thead>
     <tr>
