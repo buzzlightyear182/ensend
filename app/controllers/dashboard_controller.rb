@@ -1,6 +1,6 @@
 class DashboardController < ApplicationController
-  include SidebarList
-  before_action :set_list
+  # include SidebarList
+  # before_action :set_list
   before_action :authenticate_user!, only: [:show]
 
   def static

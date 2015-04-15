@@ -1,10 +1,10 @@
-module SidebarList
-  extend ActiveSupport::Concern
+# module SidebarList
+#   extend ActiveSupport::Concern
 
-  private
+#   private
 
-  def set_list
-    @categories = Category.all
-    # @tags = Tags.all
-  end
-end
+#   def set_list
+#     @categories = Category.all
+#     # @tags = Tags.all
+#   end
+# end
