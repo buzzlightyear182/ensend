@@ -16,6 +16,9 @@
     <% @product.commission_types.each do |commission_type| %>
       <p><%= commission_type.name %></p>
     <% end %>
+    <p><%= link_to "Apply link here", @product.apply_link %></p>
+    <p><%= link_to "Visit website link here", @product.apply_link %></p>
+    <p><%= "With affiliate" ? @product.with_affiliate? : nil %></p>
   </div>
 
   <%= link_to 'Edit', edit_admin_product_path(@product) %> |
