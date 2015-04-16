@@ -44,7 +44,7 @@
     <label class = "col-sm-2 control-label">Choose tags</label>
     <div class="col-sm-10">
     <%= hidden_field_tag "product[tags_ids][]", nil %>
-      <% @categories.each do |category|  %>
+      <% categories.each do |category|  %>
         <div class="col-sm-4">
         <h4><%= category.name  %></h4>
           <% category.tags.each do |tag| %>
@@ -62,7 +62,7 @@
     <label class = "col-sm-2 control-label">Choose commission type:</label>
     <div class="col-sm-10">
     <%= hidden_field_tag "product[commission_types_ids][]", nil %>
-      <% @commission_types.each do |commission|  %>
+      <% commission_types.each do |commission|  %>
         <div class="col-sm-4">
           <%= check_box_tag "product[commission_type_ids][]", commission.id, @product.commission_type_ids.include?(commission.id), id: dom_id(commission) %>
             <%= label_tag dom_id(commission), commission.name  %>

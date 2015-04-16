@@ -1,7 +1,9 @@
 class Admin::ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_choices, only: [:new, :edit]
+
+  helper_method :categories
+  helper_method :commission_types
 
   # GET /products
   # GET /products.json
@@ -82,8 +84,11 @@ class Admin::ProductsController < ApplicationController
       params.require(:product).permit(:title, :subtitle, :short_description, :content, :tag_ids => [], :commission_type_ids => [])
     end
 
-    def set_choices
-      @categories = Category.all
-      @commission_types = CommissionType.all
+    def categories
+      @_category = Category.all
+    end
+
+    def commission_types
+      @_commission_types = CommissionType.all
     end
 end
