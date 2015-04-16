@@ -12,6 +12,10 @@
     <% @product.tags.each do |tag| %>
       <p><%= tag.name %></p>
     <% end %>
+    <h4>Commission Types:</h4>
+    <% @product.commission_types.each do |commission_type| %>
+      <p><%= commission_type.name %></p>
+    <% end %>
   </div>
 
   <%= link_to 'Edit', edit_admin_product_path(@product) %> |

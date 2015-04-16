@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150416074216) do
+ActiveRecord::Schema.define(version: 20150416081603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,14 @@ ActiveRecord::Schema.define(version: 20150416074216) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
+
+  create_table "products_and_commission_types", id: false, force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "commission_type_id"
+  end
+
+  add_index "products_and_commission_types", ["commission_type_id"], name: "index_products_and_commission_types_on_commission_type_id", using: :btree
+  add_index "products_and_commission_types", ["product_id"], name: "index_products_and_commission_types_on_product_id", using: :btree
 
   create_table "products_and_tags", id: false, force: :cascade do |t|
     t.integer "product_id"
