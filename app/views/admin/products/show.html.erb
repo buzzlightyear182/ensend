@@ -7,7 +7,7 @@
 
   <div class="main">
     <p><em><%= @product.short_description %></em></p>
-    <p><%= @product.content %></p>
+    <p><%= raw (@product.content) %></p>
     <h4>Tags:</h4>
     <% @product.tags.each do |tag| %>
       <p><%= tag.name %></p>

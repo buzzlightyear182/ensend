@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :tags
     resources :products
+    resources :commission_types
   end
 
   get '/admin' => 'admin/dashboard#show'

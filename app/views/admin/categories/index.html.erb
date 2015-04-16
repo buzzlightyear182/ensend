@@ -1,37 +1,37 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
   <div class="col-sm-12" style="margin-bottom:20px;">
-  <h1>Listing Categories</h1>
-  <%= link_to 'New Category', new_admin_category_path, :class => "btn btn-primary" %>
-  <%= link_to 'New Tag', new_admin_tag_path, :class => "btn btn-primary" %>
+    <h1>Listing Categories</h1>
+    <%= link_to 'New Category', new_admin_category_path, :class => "btn btn-primary" %>
+    <%= link_to 'New Tag', new_admin_tag_path, :class => "btn btn-primary" %>
   </div>
 
-<div class="col-sm-6">
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Category name</th>
-      <th colspan='2'>Controls</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><h4><%= category.name %></h4></td>
-        <td><%= link_to 'Edit', edit_admin_category_path(category) %></td>
-        <td><%= link_to 'Destroy', admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% category.tags.each do |tag| %>
+  <div class="col-sm-6">
+    <table class="table table-striped">
+      <thead>
         <tr>
-          <td style="text-indent:10%;"><%= tag.name %></td>
-          <td><%= link_to 'Edit', edit_admin_tag_path(tag) %></td>
-          <td><%= link_to 'Destroy', admin_tag_path(tag), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <th>Category name</th>
+          <th colspan='2'>Controls</th>
         </tr>
-        <% end %>
+      </thead>
 
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-</div>
+      <tbody>
+        <% @categories.each do |category| %>
+          <tr>
+            <td><h4><%= category.name %></h4></td>
+            <td><%= link_to 'Edit', edit_admin_category_path(category) %></td>
+            <td><%= link_to 'Destroy', admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% category.tags.each do |tag| %>
+            <tr>
+              <td style="text-indent:10%;"><%= tag.name %></td>
+              <td><%= link_to 'Edit', edit_admin_tag_path(tag) %></td>
+              <td><%= link_to 'Destroy', admin_tag_path(tag), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+            <% end %>
+
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
