@@ -18,18 +18,22 @@ require 'rails_helper'
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
 
-RSpec.describe CommissionTypesController, type: :controller do
+RSpec.describe Admin::CommissionTypesController, type: :controller do
+
+  before :each do
+    login_admin
+  end
 
   # This should return the minimal set of attributes required to create a valid
   # CommissionType. As you add validations to CommissionType, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    { name: "Discounted", label: "Discounted Offers available", icon: "money" }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
-  }
+     { name: "", label: "Discounted Offers available", icon: "money" }
+   }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -83,7 +87,7 @@ RSpec.describe CommissionTypesController, type: :controller do
 
       it "redirects to the created commission_type" do
         post :create, {:commission_type => valid_attributes}, valid_session
-        expect(response).to redirect_to(CommissionType.last)
+        expect(response).to redirect_to(admin_commission_types_path)
       end
     end
 
@@ -103,14 +107,14 @@ RSpec.describe CommissionTypesController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        { name: "Referrals", label: "Earn when you refer this product", icon: "money" }
       }
 
       it "updates the requested commission_type" do
         commission_type = CommissionType.create! valid_attributes
         put :update, {:id => commission_type.to_param, :commission_type => new_attributes}, valid_session
         commission_type.reload
-        skip("Add assertions for updated state")
+        expect(commission_type.name).to eq("Referrals")
       end
 
       it "assigns the requested commission_type as @commission_type" do
@@ -122,7 +126,7 @@ RSpec.describe CommissionTypesController, type: :controller do
       it "redirects to the commission_type" do
         commission_type = CommissionType.create! valid_attributes
         put :update, {:id => commission_type.to_param, :commission_type => valid_attributes}, valid_session
-        expect(response).to redirect_to(commission_type)
+        expect(response).to redirect_to(admin_commission_types_path)
       end
     end
 
@@ -152,7 +156,7 @@ RSpec.describe CommissionTypesController, type: :controller do
     it "redirects to the commission_types list" do
       commission_type = CommissionType.create! valid_attributes
       delete :destroy, {:id => commission_type.to_param}, valid_session
-      expect(response).to redirect_to(commission_types_url)
+      expect(response).to redirect_to(admin_commission_types_url)
     end
   end
 

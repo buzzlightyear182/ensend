@@ -23,11 +23,13 @@ RSpec.describe Category, type: :model do
 
     it "if record exists" do
       new_category = build(:category, name: "I am a category")
+      expect(new_category).to be_invalid
       expect(Category.count).to eq(1)
     end
 
     it "if name is blank" do
       new_category = build(:category, name: "")
+      expect(new_category).to be_invalid
       expect(Category.count).to eq(1)
     end
 

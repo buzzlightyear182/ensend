@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "commission_types/index", type: :view do
+RSpec.describe "admin/commission_types/index", type: :view do
   before(:each) do
     assign(:commission_types, [
-      CommissionType.create!(),
-      CommissionType.create!()
+      create(:commission_type),
+      create(:commission_type, name: "Referrals")
     ])
   end
 
