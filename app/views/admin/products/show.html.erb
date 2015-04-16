@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="header">
+    <h2><%= @product.title %></h2>
+    <h4><%= @product.subtitle %></h4>
+  </div>
+
+  <div class="main">
+    <p><em><%= @product.short_description %></em></p>
+    <p><%= @product.content %></p>
+    <h4>Tags:</h4>
+    <% @product.tags.each do |tag| %>
+      <p><%= tag.name %></p>
+    <% end %>
+  </div>
+
+  <%= link_to 'Edit', edit_admin_product_path(@product) %> |
+  <%= link_to 'Back', admin_products_path %>
+</div>

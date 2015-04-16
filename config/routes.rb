@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root 'dashboard#static', as: :home
-  resources :dashboard, only: :show
-  resources :categories
-  resources :tags
-  resources :products
+  root 'home#static', as: :home
+
+  namespace :admin do
+    resources :dashboard, only: :show
+    resources :categories
+    resources :tags
+    resources :products
+  end
+
+  get '/admin' => 'admin/dashboard#show'
+
+  # get 'products/get_tags/:category_id' => 'products#get_tags'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def after_sign_in_path_for(resource)
-    products_path
+    if user_signed_in? && current_user.roles == "admin"
+      admin_dashboard_path current_user
+    else
+      root
+    end
   end
 end
