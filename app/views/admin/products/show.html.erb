@@ -6,6 +6,12 @@
   </div>
 
   <div class="main">
+    <h2>Logo</h2>
+    <%= image_tag @product.logo.url(:thumb) %>
+
+    <h2>Screenshot</h2>
+    <%= image_tag @product.screenshot.url(:medium) %>
+
     <p><em><%= @product.short_description %></em></p>
     <p><%= raw (@product.content) %></p>
     <h4>Tags:</h4>
