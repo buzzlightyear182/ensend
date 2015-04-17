@@ -5,10 +5,10 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :dashboard, only: :show
-    resources :categories
-    resources :tags
+    resources :categories, except: [:new, :show]
+    resources :tags, except: [:index, :new, :show]
     resources :products
-    resources :commission_types
+    resources :commission_types, except: [:new, :show]
   end
 
   get '/admin' => 'admin/dashboard#show'
