@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     if user_signed_in? && current_user.roles == "admin"
       admin_dashboard_path current_user
     else
-      root
+      home_path
     end
   end
 end

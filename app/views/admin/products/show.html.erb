@@ -1,29 +1,51 @@
 <div class="container">
-  <div class="header">
-    <h2><%= @product.title %></h2>
-    <h4><%= @product.subtitle %></h4>
+  <div class="header col-sm-12">
+
+    <div class="col-sm-4">
+      <h2><small>Title:</small>  <%= @product.title %></h2>
+      <h4><small>Subtitle:</small>  <%= @product.subtitle %></h4>
+    </div>
+    <div class="col-sm-4" style="margin-top:20px;">
+      <p><%= link_to "Apply link here", @product.apply_link, :class => "btn btn-primary" %></p>
+      <p><%= link_to "Visit website link here", @product.apply_link %></p>
+      <p><%= "With affiliate" ? @product.with_affiliate? : nil %></p>
+    </div>
+    <div class="col-sm-4" style="margin-top:20px;">
+      <p>Apply counter: <%= @product.title %></p>
+      <p>Visit website: <%= @product.subtitle %></>
+    </div>
   </div>
 
-  <div class="main">
-    <h2>Logo</h2>
-    <%= image_tag @product.logo.url(:thumb) %>
+  <div class="main col-sm-12" style="margin-top:20px;">
 
-    <h2>Screenshot</h2>
-    <%= image_tag @product.screenshot.url(:medium) %>
+    <div class="col-sm-4">
+      <p><em><%= @product.short_description %></em></p>
+      <p><%= raw (@product.content) %></p>
+    </div>
 
-    <p><em><%= @product.short_description %></em></p>
-    <p><%= raw (@product.content) %></p>
-    <h4>Tags:</h4>
-    <% @product.tags.each do |tag| %>
-      <p><%= tag.name %></p>
-    <% end %>
-    <h4>Commission Types:</h4>
-    <% @product.commission_types.each do |commission_type| %>
-      <p><%= commission_type.name %></p>
-    <% end %>
-    <p><%= link_to "Apply link here", @product.apply_link %></p>
-    <p><%= link_to "Visit website link here", @product.apply_link %></p>
-    <p><%= "With affiliate" ? @product.with_affiliate? : nil %></p>
+    <div class="col-sm-4">
+      <h4>Tags:</h4>
+      <% @product.tags.each do |tag| %>
+        <p><%= tag.name %></p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-4">
+      <h4>Commission Types:</h4>
+      <% @product.commission_types.each do |commission_type| %>
+        <p><%= commission_type.name %></p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-4">
+      <h2>Logo</h2>
+      <%= image_tag @product.logo.url(:thumb) %>
+    </div>
+
+    <div class="col-sm-8">
+      <h2>Screenshot</h2>
+      <%= image_tag @product.screenshot.url(:medium) %>
+    </div>
   </div>
 
   <%= link_to 'Edit', edit_admin_product_path(@product) %> |
