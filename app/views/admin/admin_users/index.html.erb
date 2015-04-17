@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="header">
+    <h1>Listing Admin Users</h1>
+
+    <%= form_tag(add_admin_path, method: "POST") do %>
+      <%= label_tag(:email, "Enter email") %>
+      <%= text_field_tag(:email) %>
+      <%= submit_tag("Add Admin", :class => "btn btn-primary") %>
+    <% end %>
+  </div>
+
+  <div class="main">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th colspan="2">Controls</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= link_to 'Remove as admin', remove_admin_path(user.id), method: 'PUT' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

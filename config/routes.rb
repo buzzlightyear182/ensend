@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   end
 
   get '/admin' => 'admin/dashboard#show'
+  get 'admin/admin_users/' => 'admin/admin_users#index', as: :admin_list
+  patch 'admin/admin_users/:id' => 'admin/admin_users#update'
+  put 'admin/admin_users/:id' => 'admin/admin_users#update', as: :remove_admin
+  post 'admin/admin_users' => 'admin/admin_users#create', as: :add_admin
 
   # get 'products/get_tags/:category_id' => 'products#get_tags'
 
