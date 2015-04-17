@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "admin/products/new", type: :view do
   before(:each) do
     assign(:product, Product.new())
-    @categories = Category.all
+    categories = Category.all
   end
 
   it "renders new product form" do

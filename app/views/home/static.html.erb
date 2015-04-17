@@ -1,17 +1,48 @@
 <div class="jumbotron">
-  <div class="container"
->  <h1>Earn commissions by recommending website applications and services.</h1>
-  <p><%= link_to "Sign-up now", new_user_registration_path, :class => "btn btn-primary btn-lg", :role => "button" %></p>
+  <div class="row">
+    <div class="container">
+      <h1>Earn commissions by recommending website applications and services.</h1>
+      <p><%= link_to "Sign-up now", new_user_registration_path, :class => "btn btn-primary btn-lg", :role => "button" %></p>
+    </div>
   </div>
 </div>
 
 <section class="main">
   <div class="row">
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-4">
+    <div class="container">
+      <div class="col-md-4">
+        <div class="features">
+          <div class="icon-box">
+            <%= icon('money', :class => 'fa-3x') %>
+          </div>
+          <div class="icon-body text-center">
+            <h3>EARN COMMISSIONS</h3>
+            <p>Get additional income by recommending website add-ons and services to your web development projects.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="features">
+          <div class="icon-box">
+            <%= icon('users', :class => 'fa-3x') %>
+          </div>
+          <div class="icon-body text-center">
+            <h3>GET MORE CUSTOMERS</h3>
+            <p>Not everyone has enough budget for custom-made features. Provide low-cost options by integrating ready-made software.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="features">
+          <div class="icon-box">
+            <%= icon('trophy', :class => 'fa-3x') %>
+          </div>
+          <div class="icon-body text-center">
+            <h3>WIN MORE PROJECTS</h3>
+            <p>Improve your project bids by recommending alternatives to lower cost without reducing quality.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -1,0 +1,34 @@
+$green: #27ae60;
+$ensend: #6EA835;
+$ensend-darker: #4D7625;
+
+// Typeface used
+
+body {
+  font-family: 'Muli', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  color: white;
+  background-color: $ensend;
+  border-color: $ensend;
+}
+
+a {
+  color: $ensend;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+  color: white;
+  background-color: $ensend-darker;
+  border-color: $ensend-darker;
+}
+
+a:hover, a:focus {
+  color: $ensend-darker;
+}

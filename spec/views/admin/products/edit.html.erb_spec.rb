@@ -6,7 +6,7 @@ RSpec.describe "admin/products/edit", type: :view do
 
   before(:each) do
     @product = assign(:product, create(:product))
-    @categories = Category.all
+    categories = Category.all
   end
 
   it "renders the edit product form" do

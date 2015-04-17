@@ -3,6 +3,11 @@ require 'rails_helper'
 RSpec.describe Tag, type: :model do
 
  it { should belong_to(:category) }
+ it { should have_and_belong_to_many(:products) }
+
+ it { should validate_presence_of(:category) }
+ it { should validate_presence_of(:name) }
+ it { should validate_uniqueness_of(:name) }
 
   before :each do
     Category.destroy_all
