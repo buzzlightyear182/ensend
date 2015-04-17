@@ -31,7 +31,7 @@ class Admin::TagsController < ApplicationController
     respond_to do |format|
       if @tag.save
         format.html { redirect_to admin_categories_path, notice: 'Tag was successfully created.' }
-        format.json { render :show, status: :created, location: @tag }
+        format.json { render :show, status: :created }
       else
         format.html { render :new }
         format.json { render json: @tag.errors, status: :unprocessable_entity }
@@ -45,7 +45,7 @@ class Admin::TagsController < ApplicationController
     respond_to do |format|
       if @tag.update(tag_params)
         format.html { redirect_to admin_categories_path, notice: 'Tag was successfully updated.' }
-        format.json { render :show, status: :ok, location: @tag }
+        format.json { render :show, status: :ok }
       else
         format.html { render :edit }
         format.json { render json: @tag.errors, status: :unprocessable_entity }

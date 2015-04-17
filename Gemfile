@@ -11,6 +11,8 @@ gem 'normalize-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem "paperclip"
+gem 'best_in_place'
+gem 'jquery-ui-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

@@ -1,6 +1,8 @@
 <div class="container">
   <div class="col-sm-6">
     <h1>Listing Commission Types</h1>
+    <p class="subtitle"><em>Click on the names to edit them</em></p>
+
     <table class="table table-striped">
       <thead>
         <tr>
@@ -13,7 +15,7 @@
       <tbody>
         <% @commission_types.each do |commission_type| %>
           <tr>
-            <td><%= commission_type.name %></td>
+            <td><%= best_in_place commission_type, :name, :path => [:admin, commission_type] %></td>
             <td><%= icon(commission_type.icon, :class => 'fa-3x') %></td>
             <td><%= link_to 'Edit', edit_admin_commission_type_path(commission_type) %></td>
             <td><%= link_to 'Destroy', admin_commission_type_path(commission_type), method: :delete, data: { confirm: 'Are you sure?' } %></td>

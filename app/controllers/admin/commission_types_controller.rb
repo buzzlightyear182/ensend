@@ -29,7 +29,7 @@ class Admin::CommissionTypesController < ApplicationController
     respond_to do |format|
       if @commission_type.save
         format.html { redirect_to admin_commission_types_path, notice: 'Commission type was successfully created.' }
-        format.json { render :show, status: :created, location: @commission_type }
+        format.json { render :show, status: :created }
       else
         format.html { render :new }
         format.json { render json: @commission_type.errors, status: :unprocessable_entity }
@@ -43,7 +43,7 @@ class Admin::CommissionTypesController < ApplicationController
     respond_to do |format|
       if @commission_type.update(commission_type_params)
         format.html { redirect_to admin_commission_types_path, notice: 'Commission type was successfully updated.' }
-        format.json { render :show, status: :ok, location: @commission_type }
+        format.json { render :show, status: :ok }
       else
         format.html { render :edit }
         format.json { render json: @commission_type.errors, status: :unprocessable_entity }

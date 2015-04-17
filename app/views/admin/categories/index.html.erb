@@ -1,7 +1,9 @@
 <div class="container">
 
   <div class="col-sm-6">
-    <h1>Listing Categories</h1>
+    <h1>Listing Categories and Tags</h1>
+    <p class="subtitle"><em>Click on the names to edit them</em></p>
+
     <table class="table table-striped">
       <thead>
         <tr>
@@ -13,12 +15,12 @@
       <tbody>
         <% @categories.each do |category| %>
           <tr>
-            <td><h4><%= category.name %></h4></td>
+            <td><h4><%= best_in_place category, :name, :path => [:admin, category] %></h4></td>
             <td><%= link_to 'Edit', edit_admin_category_path(category) %></td>
             <td><%= link_to 'Destroy', admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></td>
             <% category.tags.each do |tag| %>
             <tr>
-              <td style="text-indent:10%;"><%= tag.name %></td>
+              <td style="text-indent:10%;"><%= best_in_place tag, :name, :path => [:admin, tag] %></td>
               <td><%= link_to 'Edit', edit_admin_tag_path(tag) %></td>
               <td><%= link_to 'Destroy', admin_tag_path(tag), method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
