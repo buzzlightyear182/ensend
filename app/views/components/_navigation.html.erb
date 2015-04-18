@@ -12,25 +12,9 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <% if user_signed_in? && current_user.roles == "admin" %>
-        <li><%= link_to "Dashboard", admin_dashboard_path(current_user) %></li>
-        <li><%= link_to "Manage Admin Users", admin_list_path %></li>
-        <li><%= link_to "Categories & Tags", admin_categories_path %></li>
-        <li><%= link_to "Commission Types", admin_commission_types_path %></li>
 
-        <li class="dropdown">
-          <%= link_to admin_products_path, :class =>  "dropdown-toggle", role: 'button', :data => { :toggle => 'dropdown' }, :'aria-expanded' => "false" do %>
-            Products <span class="caret"></span>
-          <% end %>
-          <ul class="dropdown-menu" role="menu">
-          <li><%= link_to "List products", admin_products_path %></li>
-            <li><%= link_to "New Product", new_admin_product_path %></li>
-          </ul>
-        </li>
-        <% end %>
-      </ul>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <%= admin_navigation %>
 
       <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>

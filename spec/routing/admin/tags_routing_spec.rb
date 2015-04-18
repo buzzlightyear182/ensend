@@ -3,17 +3,17 @@ require "rails_helper"
 RSpec.describe Admin::TagsController, type: :routing do
   describe "routing" do
 
-    it "routes to #index" do
-      expect(:get => "admin/tags").to route_to("admin/tags#index")
-    end
+    # it "routes to #index" do
+    #   expect(:get => "admin/tags").to route_to("admin/tags#index")
+    # end
 
-    it "routes to #new" do
-      expect(:get => "admin/tags/new").to route_to("admin/tags#new")
-    end
+    # it "routes to #new" do
+    #   expect(:get => "admin/tags/new").to route_to("admin/tags#new")
+    # end
 
-    it "routes to #show" do
-      expect(:get => "admin/tags/1").to route_to("admin/tags#show", :id => "1")
-    end
+    # it "routes to #show" do
+    #   expect(:get => "admin/tags/1").to route_to("admin/tags#show", :id => "1")
+    # end
 
     it "routes to #edit" do
       expect(:get => "admin/tags/1/edit").to route_to("admin/tags#edit", :id => "1")

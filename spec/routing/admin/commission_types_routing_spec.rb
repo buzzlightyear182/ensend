@@ -7,13 +7,13 @@ RSpec.describe Admin::CommissionTypesController, type: :routing do
       expect(:get => "admin/commission_types").to route_to("admin/commission_types#index")
     end
 
-    it "routes to #new" do
-      expect(:get => "admin/commission_types/new").to route_to("admin/commission_types#new")
-    end
+    # it "routes to #new" do
+    #   expect(:get => "admin/commission_types/new").to route_to("admin/commission_types#new")
+    # end
 
-    it "routes to #show" do
-      expect(:get => "admin/commission_types/1").to route_to("admin/commission_types#show", :id => "1")
-    end
+    # it "routes to #show" do
+    #   expect(:get => "admin/commission_types/1").to route_to("admin/commission_types#show", :id => "1")
+    # end
 
     it "routes to #edit" do
       expect(:get => "admin/commission_types/1/edit").to route_to("admin/commission_types#edit", :id => "1")

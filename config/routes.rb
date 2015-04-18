@@ -7,9 +7,11 @@ Rails.application.routes.draw do
     resources :dashboard, only: :show
     resources :categories, except: [:new, :show]
     resources :tags, except: [:index, :new, :show]
-    resources :products
+    resources :products, except: :show
     resources :commission_types, except: [:new, :show]
   end
+
+  resources :products, only: [:index, :show]
 
   get '/admin' => 'admin/dashboard#show'
   get 'admin/admin_users/' => 'admin/admin_users#index', as: :admin_list

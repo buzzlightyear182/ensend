@@ -51,14 +51,6 @@ RSpec.describe Admin::ProductsController, type: :controller do
     end
   end
 
-  describe "GET #show" do
-    it "assigns the requested product as @product" do
-      product = Product.create! valid_attributes
-      get :show, {:id => product.to_param}, valid_session
-      expect(assigns(:product)).to eq(product)
-    end
-  end
-
   describe "GET #new" do
     it "assigns a new product as @product" do
       get :new, {}, valid_session
@@ -90,7 +82,7 @@ RSpec.describe Admin::ProductsController, type: :controller do
 
       it "redirects to the created product" do
         post :create, {:product => valid_attributes}, valid_session
-        expect(response).to redirect_to(admin_product_path(Product.last))
+        expect(response).to redirect_to(Product.last)
       end
     end
 
@@ -129,7 +121,7 @@ RSpec.describe Admin::ProductsController, type: :controller do
       it "redirects to the product" do
         product = Product.create! valid_attributes
         put :update, {:id => product.to_param, :product => valid_attributes}, valid_session
-        expect(response).to redirect_to(admin_product_path(product))
+        expect(response).to redirect_to(product)
       end
     end
 

@@ -48,21 +48,6 @@ RSpec.describe Admin::CommissionTypesController, type: :controller do
     end
   end
 
-  describe "GET #show" do
-    it "assigns the requested commission_type as @commission_type" do
-      commission_type = CommissionType.create! valid_attributes
-      get :show, {:id => commission_type.to_param}, valid_session
-      expect(assigns(:commission_type)).to eq(commission_type)
-    end
-  end
-
-  describe "GET #new" do
-    it "assigns a new commission_type as @commission_type" do
-      get :new, {}, valid_session
-      expect(assigns(:commission_type)).to be_a_new(CommissionType)
-    end
-  end
-
   describe "GET #edit" do
     it "assigns the requested commission_type as @commission_type" do
       commission_type = CommissionType.create! valid_attributes

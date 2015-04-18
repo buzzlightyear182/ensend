@@ -2,11 +2,12 @@ require 'rails_helper'
 
 RSpec.describe "admin/products/edit", type: :view do
 
-    let(:current_user) { create(:admin) }
+  let(:current_user) { create(:admin) }
+  let (:categories) { Category.all }
 
   before(:each) do
+    create(:category)
     @product = assign(:product, create(:product))
-    categories = Category.all
   end
 
   it "renders the edit product form" do

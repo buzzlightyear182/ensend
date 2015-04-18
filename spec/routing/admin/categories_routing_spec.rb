@@ -7,13 +7,13 @@ RSpec.describe Admin::CategoriesController, type: :routing do
       expect(:get => "admin/categories").to route_to("admin/categories#index")
     end
 
-    it "routes to #new" do
-      expect(:get => "admin/categories/new").to route_to("admin/categories#new")
-    end
+    # it "routes to #new" do
+    #   expect(:get => "admin/categories/new").to route_to("admin/categories#new")
+    # end
 
-    it "routes to #show" do
-      expect(:get => "admin/categories/1").to route_to("admin/categories#show", :id => "1")
-    end
+    # it "routes to #show" do
+    #   expect(:get => "admin/categories/1").to route_to("admin/categories#show", :id => "1")
+    # end
 
     it "routes to #edit" do
       expect(:get => "admin/categories/1/edit").to route_to("admin/categories#edit", :id => "1")

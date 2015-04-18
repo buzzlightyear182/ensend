@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "admin/products/show", type: :view do
+RSpec.describe "/products/show", type: :view do
   before(:each) do
     @product = assign(:product, create(:product))
   end

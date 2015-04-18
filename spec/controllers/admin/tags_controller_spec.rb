@@ -43,29 +43,6 @@ RSpec.describe Admin::TagsController, type: :controller do
   # TagsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #index" do
-    it "assigns all tags as @tags" do
-      tag = Tag.create! valid_attributes
-      get :index, {}, valid_session
-      expect(assigns(:tags)).to eq([tag])
-    end
-  end
-
-  describe "GET #show" do
-    it "assigns the requested tag as @tag" do
-      tag = Tag.create! valid_attributes
-      get :show, {:id => tag.to_param}, valid_session
-      expect(assigns(:tag)).to eq(tag)
-    end
-  end
-
-  describe "GET #new" do
-    it "assigns a new tag as @tag" do
-      get :new, {}, valid_session
-      expect(assigns(:tag)).to be_a_new(Tag)
-    end
-  end
-
   describe "GET #edit" do
     it "assigns the requested tag as @tag" do
       tag = Tag.create! valid_attributes
@@ -90,7 +67,7 @@ RSpec.describe Admin::TagsController, type: :controller do
 
       it "redirects to the tags index" do
         post :create, {:tag => valid_attributes}, valid_session
-        expect(response).to redirect_to(admin_tags_path)
+        expect(response).to redirect_to(admin_categories_path)
       end
     end
 
@@ -129,7 +106,7 @@ RSpec.describe Admin::TagsController, type: :controller do
       it "redirects to the tags index" do
         tag = Tag.create! valid_attributes
         put :update, {:id => tag.to_param, :tag => valid_attributes}, valid_session
-        expect(response).to redirect_to(admin_tags_path)
+        expect(response).to redirect_to(admin_categories_path)
       end
     end
 
@@ -159,7 +136,7 @@ RSpec.describe Admin::TagsController, type: :controller do
     it "redirects to the tags list" do
       tag = Tag.create! valid_attributes
       delete :destroy, {:id => tag.to_param}, valid_session
-      expect(response).to redirect_to(admin_tags_url)
+      expect(response).to redirect_to(admin_categories_url)
     end
   end
 

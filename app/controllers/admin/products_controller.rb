@@ -1,6 +1,6 @@
 class Admin::ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_product, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
 
   helper_method :categories
   helper_method :commission_types
@@ -9,11 +9,6 @@ class Admin::ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
-  end
-
-  # GET /products/1
-  # GET /products/1.json
-  def show
   end
 
   # GET /products/new
@@ -32,7 +27,7 @@ class Admin::ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to admin_product_path(@product), notice: 'Product was successfully created.' }
+        format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
@@ -46,7 +41,7 @@ class Admin::ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        format.html { redirect_to admin_product_path(@product), notice: 'Product was successfully updated.' }
+        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
       else
         format.html { render :edit }
