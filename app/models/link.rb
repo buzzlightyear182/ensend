@@ -4,6 +4,8 @@ class Link < ActiveRecord::Base
 
   validates :url, presence: true, uniqueness: { case_sensitive: false }
   validates :link_type, presence: true
-  validates :product, presence: true
+
+  scope :homepage, -> {where(link_type_id: 1)}
+  scope :affiliate, -> {where(link_type_id: 2)}
 
 end

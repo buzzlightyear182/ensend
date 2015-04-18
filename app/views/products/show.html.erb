@@ -1,16 +1,21 @@
 <div class="container">
-  <div class="header col-sm-12">
+
+  <%= edit_product? %>
+
+  <div class="col-sm-12">
 
     <div class="col-sm-4">
       <h2><small>Title:</small>  <%= @product.title %></h2>
       <h4><small>Subtitle:</small>  <%= @product.subtitle %></h4>
     </div>
     <div class="col-sm-4" style="margin-top:20px;">
+      <p><%= link_to 'Apply now', @product.affiliate_link.url, :class => 'btn btn-xl btn-primary' %></p>
+      <p><%= link_to "Visit website", @product.homepage.url %></p>
       <p><%= "With affiliate" ? @product.with_affiliate? : nil %></p>
     </div>
     <div class="col-sm-4" style="margin-top:20px;">
-      <p>Apply counter: <%= @product.title %></p>
-      <p>Visit website: <%= @product.subtitle %></>
+      <p>Apply counter: <%= @product.affiliate_link.url %></p>
+      <p>Visit website: <%= @product.homepage.url %></>
     </div>
   </div>
 
