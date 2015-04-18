@@ -9,13 +9,13 @@
       <h4><small>Subtitle:</small>  <%= @product.subtitle %></h4>
     </div>
     <div class="col-sm-4" style="margin-top:20px;">
-      <p><%= link_to 'Apply now', @product.affiliate_link.url, :class => 'btn btn-xl btn-primary' %></p>
-      <p><%= link_to "Visit website", @product.homepage.url %></p>
+      <p><%= link_to 'Apply now', visit_url_path(@product.homepage.counter.id), method: 'put', :class => 'btn btn-xl btn-primary' %></p>
+      <p><%= link_to "Visit website", visit_url_path(@product.affiliate_link.counter.id), method: 'put' %></p>
       <p><%= "With affiliate" ? @product.with_affiliate? : nil %></p>
     </div>
     <div class="col-sm-4" style="margin-top:20px;">
-      <p>Apply counter: <%= @product.affiliate_link.url %></p>
-      <p>Visit website: <%= @product.homepage.url %></>
+      <p>Apply counter: <%= @product.homepage.counter.count %> - <%= @product.affiliate_link.url %></p>
+      <p>Visit website: <%= @product.affiliate_link.counter.count %> - <%= @product.homepage.url %></>
     </div>
   </div>
 

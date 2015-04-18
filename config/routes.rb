@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   put 'admin/admin_users/:id' => 'admin/admin_users#update', as: :remove_admin
   post 'admin/admin_users' => 'admin/admin_users#create', as: :add_admin
 
+  put 'counters/:id' => 'admin/counters#update', as: :visit_url
+
   # get 'products/get_tags/:category_id' => 'products#get_tags'
 
   # The priority is based upon order of creation: first created -> highest priority.
