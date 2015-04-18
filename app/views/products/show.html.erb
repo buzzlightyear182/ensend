@@ -6,8 +6,6 @@
       <h4><small>Subtitle:</small>  <%= @product.subtitle %></h4>
     </div>
     <div class="col-sm-4" style="margin-top:20px;">
-      <p><%= link_to "Apply link here", @product.apply_link, :class => "btn btn-primary" %></p>
-      <p><%= link_to "Visit website link here", @product.apply_link %></p>
       <p><%= "With affiliate" ? @product.with_affiliate? : nil %></p>
     </div>
     <div class="col-sm-4" style="margin-top:20px;">

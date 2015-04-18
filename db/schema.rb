@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150416090556) do
+ActiveRecord::Schema.define(version: 20150418033459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,16 +30,28 @@ ActiveRecord::Schema.define(version: 20150416090556) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "link_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "links", force: :cascade do |t|
+    t.integer  "product_id"
+    t.string   "url",          null: false
+    t.integer  "link_type_id", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string   "title",                   null: false
     t.string   "subtitle"
     t.text     "short_description"
     t.text     "content"
+    t.boolean  "with_affiliate?"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
-    t.string   "visit_link"
-    t.string   "apply_link"
-    t.boolean  "with_affiliate?"
     t.string   "screenshot_file_name"
     t.string   "screenshot_content_type"
     t.integer  "screenshot_file_size"
@@ -63,6 +75,7 @@ ActiveRecord::Schema.define(version: 20150416090556) do
     t.integer "tag_id"
   end
 
+  add_index "products_and_tags", ["product_id", "tag_id"], name: "index_products_and_tags_on_product_id_and_tag_id", unique: true, using: :btree
   add_index "products_and_tags", ["product_id"], name: "index_products_and_tags_on_product_id", using: :btree
   add_index "products_and_tags", ["tag_id"], name: "index_products_and_tags_on_tag_id", using: :btree
 

@@ -10,5 +10,5 @@ require 'rails_helper'
 #     end
 #   end
 # end
-RSpec.describe CommissionTypesHelper, type: :helper do
+RSpec.describe Admin::CommissionTypesHelper, type: :helper do
 end

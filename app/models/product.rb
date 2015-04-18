@@ -7,9 +7,13 @@ class Product < ActiveRecord::Base
   has_attached_file :logo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   has_attached_file :screenshot, :styles => { :medium => "656x369>" }, :default_url => "/images/:style/missing.png"
 
+  has_many :links
+
   validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
   validates_attachment_content_type :screenshot, :content_type => /\Aimage\/.*\Z/
 
   validates :title, presence: true, uniqueness: true
+
+  accepts_nested_attributes_for :links, allow_destroy: true
 
 end

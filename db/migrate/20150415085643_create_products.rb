@@ -5,7 +5,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :subtitle
       t.text :short_description
       t.text :content
-      t.belongs_to :category, null: false
+      t.boolean :with_affiliate?
       t.timestamps null: false
     end
   end
