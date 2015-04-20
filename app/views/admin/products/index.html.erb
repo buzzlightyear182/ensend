@@ -10,7 +10,9 @@
       <thead>
         <tr>
           <th>Title</th>
-          <th>Short description</th>
+          <th>Short Description</th>
+          <th>Apply count</th>
+          <th>Visit website count</th>
           <th colspan="3">Controls</th>
         </tr>
       </thead>
@@ -20,6 +22,8 @@
           <tr>
             <td><%= product.title %></td>
             <td><%= truncate(strip_tags(product.short_description), length: 80) %></td>
+            <td></td>
+            <td></td>
             <td><%= link_to 'Show', product %></td>
             <td><%= link_to 'Edit', edit_admin_product_path(product) %></td>
             <td><%= link_to 'Destroy', admin_product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %></td>
