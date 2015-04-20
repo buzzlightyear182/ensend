@@ -6,9 +6,13 @@ module ApplicationHelper
     end
   end
 
-  def admin_navigation
+  def navigation_switch
     if user_signed_in? && current_user.roles == "admin"
       render 'components/admin_nav'
+    elsif user_signed_in?
+      render 'components/user_nav'
+    else
+      return
     end
   end
 

@@ -1,0 +1,16 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading<%=category.id%>">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%=category.id%>" aria-expanded="true" aria-controls="collapse<%=category.id%>">
+           <%= category.name %>
+        </a>
+      </h4>
+    </div>
+    <div id="collapse<%=category.id%>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%=category.id%>">
+      <div class="list-group">
+        <%= render partial: 'components/sidebar/tag', collection: category.tags %>
+      </div>
+    </div>
+  </div>
+</div>

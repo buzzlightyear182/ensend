@@ -14,10 +14,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <%= admin_navigation %>
+      <%= navigation_switch %>
 
       <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
+        <li><%= link_to "Manage user account", edit_user_registration_path %></li>
         <li><%= link_to "Log out", destroy_user_session_path, :method => 'DELETE' %></li>
       <% else %>
         <li><%= link_to "Login", new_user_session_path %></li>

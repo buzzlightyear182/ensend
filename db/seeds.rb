@@ -33,8 +33,8 @@ Tag.create([
   ])
 end
 
-link_type01= LinkType.create(name: "Homepage")
-link_type02= LinkType.create(name: "Affiliate")
+LinkType.create(name: "Homepage")
+LinkType.create(name: "Affiliate")
 
 (1..10).each do |index|
   product= Product.create title: "Product #{index}",

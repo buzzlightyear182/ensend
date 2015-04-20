@@ -1,0 +1,5 @@
+<tr>
+  <td><%= image_tag product.logo.url(:thumb, timestamp:false) %></td>
+  <td><%= link_to product.title, product %></td>
+  <td><%= truncate(strip_tags(product.short_description), length: 80) %></td>
+</tr>

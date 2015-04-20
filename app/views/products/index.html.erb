@@ -1,30 +1,22 @@
-<div class="container">
-  <div class="header">
-    <h1>Listing Products</h1>
-  </div>
+<div class="col-sm-2">
+  <%= render 'components/sidebar/user_sidebar' %>
+</div>
 
-  <div class="main">
-    <div class="col-sm-3">
-    </div>
+<div class="main">
+  <div class="col-sm-10">
+  <h1>Listing Products</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+        <th></th>
+          <th>Title</th>
+          <th>Short description</th>
+        </tr>
+      </thead>
 
-    <div class="col-sm-9">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Short description</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @products.each do |product| %>
-            <tr>
-              <td><%= link_to product.title, product %></td>
-              <td><%= truncate(strip_tags(product.short_description), length: 80) %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
+      <tbody>
+        <%= render @products %>
+      </tbody>
+    </table>
   </div>
 </div>

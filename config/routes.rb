@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   end
 
   resources :products, only: [:index, :show]
+  resources :tags, only: :show
+  resources :categories, only: :show
 
   get '/admin' => 'admin/dashboard#show'
   get 'admin/admin_users/' => 'admin/admin_users#index', as: :admin_list
