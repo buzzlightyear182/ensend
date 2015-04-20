@@ -55,7 +55,7 @@
       <%= f.fields_for :links do |builder| %>
         <%= render 'link_fields', f: builder %>
       <% end %>
-      <%= link_to_add_fields "Add Link", f, :links %>
+      <%= link_to_add_association "Add Link", f, :links %>
     </div>
   </div>
 

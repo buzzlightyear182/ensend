@@ -16,18 +16,20 @@
 //= require jquery-ui
 //= require best_in_place.jquery-ui
 //= require bootstrap-sprockets
+//= require cocoon
 //= require dashboard
 //= require turbolinks
+
 //= require_tree .
 
-function get_tags(){
-  console.log("Inside get_tags() function");
-  value_id = $('#product_category_id').val();
-  console.log(value_id);
-  $.ajax({
-    url: '/products/get_tags/' + value_id,
-    data: { category_id: $('#product_category_id').val() },
-    dataType: 'script'
-  })
-}
+// function get_tags(){
+//   console.log("Inside get_tags() function");
+//   value_id = $('#product_category_id').val();
+//   console.log(value_id);
+//   $.ajax({
+//     url: '/products/get_tags/' + value_id,
+//     data: { category_id: $('#product_category_id').val() },
+//     dataType: 'script'
+//   })
+// }
 
