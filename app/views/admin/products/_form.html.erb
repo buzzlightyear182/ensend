@@ -1,16 +1,5 @@
 <%= form_for([:admin, @product], html: {:class => "form-horizontal"}) do |f| %>
-  <% if @product.errors.any? %>
-    <div class="alert alert-danger alert-dismissible" role="alert" id="error_explanation">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
-
-      <ul>
-      <% @product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= show_errors_of(@product) %>
 
   <div class="col-sm-8">
     <div class="form-group">

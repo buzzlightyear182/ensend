@@ -1,16 +1,5 @@
 <%= form_for([:admin, @tag], html: {:class => "form-horizontal"}) do |f| %>
-  <% if @tag.errors.any? %>
-    <div class="alert alert-danger alert-dismissible" role="alert" id="error_explanation">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <h2><%= pluralize(@tag.errors.count, "error") %> prohibited this tag from being saved:</h2>
-
-      <ul>
-      <% @tag.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <%= show_errors_of(@tag) %>
 
   <div class="form-group">
     <%= f.label :name, :class => "col-sm-2 control-label" %>

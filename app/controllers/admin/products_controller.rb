@@ -50,14 +50,6 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
-  def get_tags
-    @tags = Tag.where(category_id: params[:category_id])
-      @product = Product.new
-    respond_to do |format|
-      format.js
-    end
-  end
-
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
@@ -76,7 +68,7 @@ class Admin::ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:title, :subtitle, :short_description, :content, :logo, :screenshot, :with_affiliate?, :tag_ids => [], :commission_type_ids => [], :links_attributes => [:id, :url, :link_type_id, :_destoy])
+      params.require(:product).permit(:title, :subtitle, :short_description, :content, :logo, :screenshot, :with_affiliate?, :tag_ids => [], :commission_type_ids => [], :links_attributes => [:id, :url, :link_type_id, :_destroy])
     end
 
     def categories

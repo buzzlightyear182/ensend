@@ -12,4 +12,10 @@ module ApplicationHelper
     end
   end
 
+  def show_errors_of(object)
+    if object.errors.any?
+      render 'components/form_error', object: object
+    end
+  end
+
 end

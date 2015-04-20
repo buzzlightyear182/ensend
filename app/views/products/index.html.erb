@@ -4,22 +4,27 @@
   </div>
 
   <div class="main">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Short description</th>
-        </tr>
-      </thead>
+    <div class="col-sm-3">
+    </div>
 
-      <tbody>
-        <% @products.each do |product| %>
+    <div class="col-sm-9">
+      <table class="table table-striped">
+        <thead>
           <tr>
-            <td><%= link_to product.title, product %></td>
-            <td><%= truncate(strip_tags(product.short_description), length: 80) %></td>
+            <th>Title</th>
+            <th>Short description</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+
+        <tbody>
+          <% @products.each do |product| %>
+            <tr>
+              <td><%= link_to product.title, product %></td>
+              <td><%= truncate(strip_tags(product.short_description), length: 80) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

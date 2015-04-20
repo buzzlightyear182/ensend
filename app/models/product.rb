@@ -1,4 +1,7 @@
 class Product < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :finders]
+
   default_scope { order('title ASC') }
   has_and_belongs_to_many :tags, join_table: :products_and_tags
   has_many :categories, -> { distinct }, through: :tags

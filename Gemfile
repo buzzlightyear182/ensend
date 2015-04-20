@@ -69,3 +69,5 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'friendly_id', '~> 5.1.0'
+
