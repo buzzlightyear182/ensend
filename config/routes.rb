@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   put 'admin/admin_users/:id' => 'admin/admin_users#update', as: :remove_admin
   post 'admin/admin_users' => 'admin/admin_users#create', as: :add_admin
 
-  put 'counters/:id' => 'admin/counters#update', as: :visit_url
+  put 'visit/:id/:slug' => 'admin/counters#update', as: :visit_url
 
   # get 'products/get_tags/:category_id' => 'products#get_tags'
 
