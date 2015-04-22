@@ -9,9 +9,11 @@
       <h4><small>Subtitle:</small>  <%= @product.subtitle %></h4>
       <p><%= "With affiliate" ? @product.with_affiliate? : nil %></p>
     </div>
-    <div class="col-sm-4" style="margin-top:20px;">
 
+    <div class="col-sm-4" style="margin-top:20px;">
+      <p><%= raw (@product.commission_title) %></p>
     </div>
+
     <div class="col-sm-4" style="margin-top:20px;">
       <%= check_links_of @product %>
     </div>
