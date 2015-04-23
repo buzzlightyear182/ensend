@@ -1,0 +1,14 @@
+<%= content_tag :div, :class => "form-group" do %>
+
+  <%= content_tag :p, "Apply clicks: #{statistic.affiliate_link.counter.impressionist_count}", :class => 'col-sm-6' %>
+
+  <%= check_if_zero statistic.affiliate_link.counter %>
+
+  <% end %>
+
+<%= content_tag :div, :class => "form-group" do %>
+  <%= content_tag :p, "Visit homepage clicks: #{statistic.homepage.counter.impressionist_count}", :class => 'col-sm-6' %>
+
+  <%= check_if_zero statistic.homepage.counter %>
+
+<% end %>

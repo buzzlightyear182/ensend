@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     if current_user.roles == "admin"
       return
     else
-      impressionist(product)
+      impressionist(product, :unique => [:session_hash])
     end
   end
 end

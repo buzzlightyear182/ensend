@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
   put 'visit/:id/:slug' => 'admin/counters#update', as: :visit_url
 
+  get '/admin/reset/:id' => 'admin/counters#reset', as: :reset
+
   # get 'products/get_tags/:category_id' => 'products#get_tags'
 
   # The priority is based upon order of creation: first created -> highest priority.
