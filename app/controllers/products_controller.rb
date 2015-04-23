@@ -17,15 +17,7 @@ class ProductsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
-      check_page_count
-    end
-
-    def check_page_count
-      if current_user.roles == "admin"
-        return
-      else
-        impressionist(@product)
-      end
+      check_page_count @product
     end
 
 end

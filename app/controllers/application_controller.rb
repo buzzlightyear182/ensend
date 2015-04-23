@@ -10,4 +10,12 @@ class ApplicationController < ActionController::Base
       products_path
     end
   end
+
+  def check_page_count product
+    if current_user.roles == "admin"
+      return
+    else
+      impressionist(product)
+    end
+  end
 end

@@ -2,8 +2,8 @@
   <td><%= product.title %></td>
   <td><%= truncate(strip_tags(product.short_description), length: 80) %></td>
   <td><%= product.impressionist_count %></td>
-  <td><%= product.homepage.counter.count %></td>
-  <td><%= product.affiliate_link.counter.count %></td>
+  <td><%= product.homepage.counter.impressionist_count %></td>
+  <td><%= product.affiliate_link.counter.impressionist_count %></td>
   <td><%= link_to 'Show', product %></td>
   <td><%= link_to 'Edit', edit_admin_product_path(product) %></td>
   <td><%= link_to 'Destroy', admin_product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %></td>
