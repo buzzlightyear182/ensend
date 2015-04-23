@@ -1,6 +1,7 @@
 <tr>
   <td><%= product.title %></td>
   <td><%= truncate(strip_tags(product.short_description), length: 80) %></td>
+  <td><%= product.impressionist_count %></td>
   <td><%= product.homepage.counter.count %></td>
   <td><%= product.affiliate_link.counter.count %></td>
   <td><%= link_to 'Show', product %></td>
