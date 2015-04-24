@@ -25,6 +25,8 @@ Rails.application.routes.draw do
 
   get '/admin/reset/:id' => 'admin/counters#reset', as: :reset
 
+  resources :contact_forms, only: [:new, :create]
+
   # get 'products/get_tags/:category_id' => 'products#get_tags'
 
   # The priority is based upon order of creation: first created -> highest priority.
