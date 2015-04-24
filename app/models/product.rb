@@ -23,6 +23,9 @@ class Product < ActiveRecord::Base
   has_many :links
   accepts_nested_attributes_for :links, allow_destroy: true
 
+  has_many :tab_contents
+  accepts_nested_attributes_for :tab_contents, allow_destroy: true
+
 
   has_one :homepage, -> { homepage }, :class_name => "Link"
   has_one :affiliate_link, -> { affiliate }, :class_name => "Link"

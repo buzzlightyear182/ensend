@@ -1,0 +1,8 @@
+<div class="main col-sm-12" style="margin-top:20px;">
+  <% product_tab.tab_contents.each do |content| %>
+  <div class="col-sm-4">
+    <h4><%= content.tab.name %></h4>
+    <p><%= raw (content.data) %></p>
+  </div>
+  <% end %>
+</div>

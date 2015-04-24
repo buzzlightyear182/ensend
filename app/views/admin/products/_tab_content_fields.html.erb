@@ -1,0 +1,19 @@
+<div class="well nested-fields" style="min-height:200px;">
+  <div class="field col-sm-2">
+    <%= f.label :data, "Content", :class => "control-label" %><br/>
+    <%= f.collection_select :tab_id, Tab.all, :id, :name, {}, { :class => "form-control col-sm-3"} %>
+  </div>
+  <div class="col-sm-10">
+
+    <div class="field col-sm-12">
+      <%= f.text_area :data, :class => "form-control", placeholder: 'You can input html here', rows: 6 %>
+    </div>
+
+    <div class="field col-sm-12">
+      <%= f.check_box :_destroy %>
+      <%= f.label :_destroy, "Remove Tab Content" %>
+    </div>
+  </div>
+</div>
+
+
