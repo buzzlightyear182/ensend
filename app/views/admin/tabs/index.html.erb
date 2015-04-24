@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="col-sm-7">
+    <h1>Listing Tab Names</h1>
+    <p class="subtitle"><em>Click on the names to edit them</em></p>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Tab name</th>
+          <th colspan='2'>Controls</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @tabs.each do |tab| %>
+          <tr>
+            <td><%= best_in_place tab, :name, :path => [:admin, tab] %></td>
+            <td><%= link_to 'Edit', edit_admin_tab_path(tab) %></td>
+            <td><%= link_to 'Destroy', admin_tab_path(tab), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-sm-5">
+    <div class="well" style="margin-top:20px;">
+      <h4>Setup Tab Name</h4>
+      <%= form_tag(admin_tabs_path, method: "POST") do %>
+        <div class='form-group' style="margin-bottom:15px;">
+          <%= label_tag('tab[name]', "Name") %>
+          <%= text_field_tag('tab[name]', nil, :class => "form-control") %>
+        </div>
+        <div class='form-group'>
+          <%= submit_tag("Create new tab name", :class => "btn btn-primary") %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>

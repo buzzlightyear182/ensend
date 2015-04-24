@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :tags, except: [:index, :new, :show]
     resources :products, except: :show
     resources :commission_types, except: [:new, :show]
+    resources :tabs, except: [:new, :show]
   end
 
   resources :products, only: [:index, :show]
