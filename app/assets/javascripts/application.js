@@ -10,11 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-= require jquery.min
-//= require bootstrap.min
-//= require jquery_library
-//= require templatelibrary
-//= require register-modal
+//= require jquery
 //= require best_in_place
 //= require jquery_ujs
 //= require jquery-ui
