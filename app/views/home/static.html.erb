@@ -1,48 +1,162 @@
-<div class="jumbotron">
-  <div class="row">
-    <div class="container">
-      <h1>Earn commissions by recommending website applications and services.</h1>
-      <p><%= link_to "Sign-up now", new_user_registration_path, :class => "btn btn-primary btn-lg", :role => "button" %></p>
+<style>
+.tp-caption a:hover { color: #FFFFFF; }
+.tp-caption a { color: #F7F7F7; }
+@media (min-width: 992px) {.featured-item:hover { background-color: #F8F8F8; opacity: .7; filter: alpha(opacity=70); } }
+h3 { font-size: 24px; }
+h2 { font-size: 28px; }
+body { font-size: 18px; line-height: 150%; }
+</style>
+<div class="main">
+  <section class="slide-content">
+    <div class="custom-home-slider tp-banner-holder"  >
+      <div class="home-slider-container">    
+        <div class="forcefullwidth_wrapper_tp_banner">
+          <div class="bg-transparent">
+            <div class="text-center slider-info">
+              <span>Earn commissions by recommending<br />
+              website applications and services.</span>
+                <a data-target="#register-modal" data-toggle="modal" class="btn btn-lg btn-danger" style="padding: 16px 36px">
+                  Create New Account</a>
+            </div>
+          </div>
+        </div> 
+      </div>
     </div>
-  </div>
-</div>
-
-<section class="main">
-  <div class="row">
+  </section>
+</div>              
+<div class="main" role="main">
+  <section class="page-content">		
     <div class="container">
-      <div class="col-md-4">
-        <div class="features">
-          <div class="icon-box">
-            <%= icon('money', :class => 'fa-3x') %>
+      <div class="row" id="vg-maincontent">   
+        <div class="col-md-12">
+        </div>                               	
+      <div class="row" id="vg-showcase-1">
+        <div class="col-md-4">
+          <div class="custom"  >
+            <div class="icon-box centered bordered circled boxed">    
+              <div class="icon"><i class="fa fa-money"></i>
+              </div>    
+            <div class="icon-box-body">        
+              <h3>Earn Commissions</h3>       
+                <p>Get additional income by recommending website add-ons and services to your web development projects.</p>
+            </div>
+            </div>
           </div>
-          <div class="icon-body text-center">
-            <h3>EARN COMMISSIONS</h3>
-            <p>Get additional income by recommending website add-ons and services to your web development projects.</p>
+        </div>
+      <div class="col-md-4">									
+        <div class="custom"  >
+          <div class="icon-box centered bordered circled boxed" >    
+            <div class="icon"><i class="fa fa-users"></i>
+            </div> 
+          <div class="icon-box-body">        
+            <h3>Get More Customers</h3>     
+              <p>Not everyone has enough budget for custom-made features. Provide low-cost options by integrating ready-made software.</p>
+          </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="features">
-          <div class="icon-box">
-            <%= icon('users', :class => 'fa-3x') %>
-          </div>
-          <div class="icon-body text-center">
-            <h3>GET MORE CUSTOMERS</h3>
-            <p>Not everyone has enough budget for custom-made features. Provide low-cost options by integrating ready-made software.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="features">
-          <div class="icon-box">
-            <%= icon('trophy', :class => 'fa-3x') %>
-          </div>
-          <div class="icon-body text-center" style="padding-bottom: 60px;">
-            <h3>WIN MORE PROJECTS</h3>
+    <div class="col-md-4">
+      <div class="custom"  >
+        <div class="icon-box centered bordered circled boxed">    
+          <div class="icon"><i class="fa fa-trophy"></i>
+          </div>  
+        <div class="icon-box-body">        
+          <h3>Win More Projects</h3> 
             <p>Improve your project bids by recommending alternatives to lower cost without reducing quality.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>							                                           
+</div>
+<div class="row" >
+  <div class="custom"  >
+    <hr class="lg">
+      <h2>Expand Your Business</h2>
+        <section class="featured-section parallax-bg" data-stellar-ratio="2" data-stellar-background-ratio="0.5">
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <div class="featured-item">
+                <div class="featured-link">
+                  <div class="featured-desc">
+                    <p class="featured-text">Refer clients to your selected service provider and get commissions.</p>
+                  </div>
+                  <div class="featured-main">
+                    <span class="featured-icon">
+                      <i class="fa fa-thumbs-o-up"></i>
+                    </span>
+                  <h3 class="featured-title">Referral</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="featured-item">
+              <div class="featured-link">
+                <div class="featured-desc">
+                  <p class="featured-text">Earn margins from discounted prices by reselling apps and web services.</p>
+                </div>
+              <div class="featured-main">
+                <span class="featured-icon">
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              <h3 class="featured-title">Reseller</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="featured-item">
+          <div class="featured-link">
+            <div class="featured-desc">
+              <p class="featured-text">Resell third-party apps and services with your own branding.</p>
+            </div>
+            <div class="featured-main">
+              <span class="featured-icon"><i class="fa fa-tags"></i>
+              </span>
+            <h3 class="featured-title">White - Label</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="featured-item">
+        <div class="featured-link">
+          <div class="featured-desc">
+            <p class="featured-text">Combine different apps and service offerings, and get even more sales!</p>
+          </div>
+          <div class="featured-main">
+            <span class="featured-icon"><i class="fa fa-cogs"></i>
+            </span>
+          <h3 class="featured-title">Integrate</h3>
           </div>
         </div>
       </div>
     </div>
   </div>
+        </section>
+      </div>
+    </div>
+  </div>              
+<div class="container">
+  <section class="section-light section-bottom" >
+    <div class="custom"  >
+      <div class="call-to-action centered">
+        <div class="cta-txt">
+          <h2>Start earning commissions.</h2>
+            <p>Sign-up now and get updated on our selection of commission deals when we go live!</p>
+        </div>
+                    <div class="cta-btn">
+                        <a class="btn btn-lg btn-danger" href="#" data-toggle="modal" data-target="#register-modal" style="padding: 16px 36px">
+                          Register Now</a>
+                    </div>
+      </div>
+    <div class="spacer">
+    </div>
+</div>
+  </section>
+    </div>
 </section>
+</div>
+</div>
+</div>	

@@ -14,14 +14,20 @@
  *= require normalize-rails
  */
 
+
 @import "bootstrap-sprockets";
-@import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "variables";
-@import "animate";
+/*@import "animate.min";*/
+/*@import "librarytemplate";*/
+/*@import "bootstrap.min";*/
+/*@import "bootstrap-theme.min";*/
+ /*@import "template.min";*/
 
-@import "home";
+
+
+/*@import "home";*/
 @import "users";
 @import "dashboard";
 @import "products"
