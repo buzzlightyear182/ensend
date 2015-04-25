@@ -43,13 +43,15 @@
 
     <div class="col-sm-4">
       <h2>Logo</h2>
-      <%= image_tag @product.logo.url(:thumb) %>
+      <%= image_tag "products/logo-#{@product.id}.jpg", :class => 'product_logo' %>
     </div>
 
     <div class="col-sm-8">
       <h2>Screenshot</h2>
-      <%= image_tag @product.screenshot.url(:medium) %>
+      <%= image_tag "products/screenshot-#{@product.id}.png", :class => 'product_screenshot' %>
     </div>
   </div>
+
+  <%= check_tabs_of @product %>
 
 </div>

@@ -10,7 +10,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'normalize-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
-gem "paperclip"
 gem 'best_in_place'
 gem 'jquery-ui-rails'
 
