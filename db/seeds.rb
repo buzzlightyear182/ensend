@@ -6,35 +6,35 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# User.create([
-#   {email: "mlking200@gmail.com", password: "password", password_confirmation: "password", roles: "admin"},
-#   {email: "jane.buzzlightyear@gmail.com", password: "password", password_confirmation: "password"}
-# ])
+User.create([
+{email: "mlking200@gmail.com", password: "password", password_confirmation: "password", roles: "admin"},
+{email: "jane.buzzlightyear@gmail.com", password: "password", password_confirmation: "password"}
+])
 
-# category01 = Category.create(name: "Web Development")
-# category02 = Category.create(name: "Online Marketing")
+category01 = Category.create(name: "Web Development")
+category02 = Category.create(name: "Online Marketing")
 
-# Tag.create([
-#   {name: "Web Hosting", category: category01},
-#   {name: "Online Store Builder", category: category01},
-#   {name: "Website Security", category: category01},
-#   {name: "SSL Certification", category: category01},
-#   {name: "CMS", category: category01},
-#   {name: "Online Payments", category: category01},
-#   {name: "Mobile App", category: category01},
-#   {name: "SEO", category: category02},
-#   {name: "Email Marketing", category: category02},
-#   {name: "Social Media", category: category02}
-# ])
+Tag.create([
+{name: "Web Hosting", category: category01},
+{name: "Online Store Builder", category: category01},
+{name: "Website Security", category: category01},
+{name: "SSL Certification", category: category01},
+{name: "CMS", category: category01},
+{name: "Online Payments", category: category01},
+{name: "Mobile App", category: category01},
+{name: "SEO", category: category02},
+{name: "Email Marketing", category: category02},
+{name: "Social Media", category: category02}
+])
 
-# (1..5).each do |index|
-#   CommissionType.create([
-#     {name: "Commission Type #{index}", label: "Label for commission type #{index}", icon: "icon-#{index}"}
-#   ])
-# end
+(1..5).each do |index|
+CommissionType.create([
+{name: "Commission Type #{index}", label: "Label for commission type #{index}", icon: "icon-#{index}"}
+])
+end
 
-# LinkType.create(name: "Homepage")
-# LinkType.create(name: "Affiliate")
+LinkType.create(name: "Homepage")
+LinkType.create(name: "Affiliate")
 
 # (1..10).each do |index|
 #   product= Product.create title: "Product #{index}",

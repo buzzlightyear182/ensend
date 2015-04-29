@@ -1,6 +1,16 @@
-<section id="user_sidebar">
-  <h4>Categories</h4>
-  <ul class="list-group">
-    <%= render partial: 'components/sidebar/category', collection: Category.all %>
-  </ul>
-</section>
+<div class="panel-group panel-menu" id="accordion"><!-- Accordion / Start--> 
+  <div class="panel panel-default panel-toggle">
+    <div class="panel-heading panel-toggle">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#accordion-1">
+          Select Category
+        </a>
+      </h4>
+    </div>
+    <div id="accordion-1" class="panel-collapse collapse in ">
+       <div class="indexmenu"> <!-- Filter Menu Bar / Start -->
+        <%= render partial: 'components/sidebar/category', collection: Category.all %>
+       </div><!-- Filter Menu Bar / End -->
+    </div>
+  </div>
+</div><!-- Accordion / End--> 

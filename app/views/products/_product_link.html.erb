@@ -1,6 +1,6 @@
-<%= content_tag :p do %>
-  <% link_to 'Apply now', visit_url_path(product_link.homepage.counter.id, product_link.slug), method: 'put', :class => 'btn btn-xl btn-primary' %>
+<%= content_tag :div, :class =>'cta-btn' do %>
+  <% link_to 'Apply', visit_url_path(product_link.homepage.counter.id, product_link.slug), method: 'put', :class => 'btn btn-lg btn-success' %>
 <% end %>
-<%= content_tag :p do %>
+<%= content_tag :div, :class =>'cta-visit' do %>
   <%  link_to 'Visit Website', visit_url_path(product_link.affiliate_link.counter.id, product_link.slug), method: 'put' %>
 <% end %>

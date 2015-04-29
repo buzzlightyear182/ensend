@@ -1,57 +1,131 @@
-<div class="container">
-
-  <%= edit_product? %>
-
-  <div class="col-sm-12">
-
-    <div class="col-sm-4">
-      <h2><small>Title:</small>  <%= @product.title %></h2>
-      <h4><small>Subtitle:</small>  <%= @product.subtitle %></h4>
-      <p><%= "With affiliate" ? @product.with_affiliate? : nil %></p>
+<div class="main" role="main" style="background-color: #F9F9F9;">
+  <section class="page-content">
+    <div class="container">
+      <%= edit_product? %>
+        <div class="row" id="vg-maincontent">
+          <div class="col-md-12">
+            <article class="entry ">
+               <div class="item-page" itemscope itemtype="http://schema.org/Article">
+                  <meta itemprop="inLanguage" content="en-GB" />
+                <div class="widget_tag_cloud widget__sidebar" style="margin-bottom: 25px;"> <!-- Tag Buttons / Start--> 
+                  <div class="widget-content">
+                    <div class="tagcloud">
+                      <% @product.tags.each do |tag| %>
+                      <span itemprop="keywords">
+                        <a href="#"><%= tag.name %></a>
+                      </span>
+                      <% end %>
+                    </div>
+                  </div>
+                </div><!-- Tag Buttons / End-->
+                <span itemprop="articleBody">
+                  <figure class="alignleft entry-thumb"><!-- Screenshot / Start-->  
+                    <div class="pull-left item-image">
+                      <%= image_tag "products/screenshot-#{@product.id}.png", :class => 'caption-image', :title => @product.title, :itemprop => 'image'  %>
+                    </div>
+                  </figure><!-- Screenshot / End-->
+                  <div class="cta-product"><!-- Product Title Container / Start-->  
+                    <h2 class="product-title"><%= @product.title %></h2>
+                      <div class="cta-txt">
+                        <p><%= @product.subtitle %></p>
+                      </div>
+                      <div>
+                        <div>
+                          <ul class="comm-type-list"><!-- Commission Types / Start-->
+                            <% @product.commission_types.each do |commission_type| %>
+                            <li><i class="<%= commission_type.icon %>">  </i> <%= commission_type.label %></li>
+                            <% end %>
+                          </ul>  <!-- Commission Types / End-->
+                        </div>  
+                      </div>
+                      <%= check_links_of @product %><!-- Product Links-->
+                  </div><!-- Product Title Container / End-->
+                  <div class="row">
+                    <div class="col-md-12 content-width">
+                      <div class="tabs">
+                        <ul class="nav nav-tabs tab-header">
+                          <li class="active"><a href="#tab-1" data-toggle="tab">Details</a></li><!-- Tab Names-->
+                          <li><a href="#tab-2" data-toggle="tab">Commissions Details</a></li><!-- Tab Names-->
+                          <li><a href="#tab-3" data-toggle="tab">Pricing Plan</a></li><!-- Tab Names-->
+                        </ul>
+                        <div class="tab-content">
+                          <%= raw (@product.content) %>
+                        </div>
+                      </div>
+                    </div>
+                  
+                  
+                  <div class="sim-header"><!-- Similar Providers / Start-->
+                    <h2 class=>Similar Providers:</h2>
+                    </div>
+                    <div class="sim-provider table-responsive"> 
+                        <table class="table table-striped ">
+                            <tr>
+                                <td>
+                                <a class="sim-thumb" href="#"><img class="media-object" src="/assets/images/logo-thumb86.png" alt="logoname"</a>
+                                <a class="sim-link" href="#">
+                                    <h2 class="sim-title">Product Title</h4>
+                                    <p class="sim-subtitle">Sed interdum sed tortor nec sagittis</p>
+                                </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <a class="sim-thumb" href="#"><img class="media-object" src="/assets/images/logo-thumb86.png" alt="logoname"</a>
+                                <a class="sim-link" href="#">
+                                    <h2 class="sim-title">Product Title</h4>
+                                    <p class="sim-subtitle">Sed interdum sed tortor nec sagittis</p>
+                                </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <a class="sim-thumb" href="#"><img class="media-object" src="/assets/images/logo-thumb86.png" alt="logoname"</a>
+                                <a class="sim-link" href="#">
+                                    <h2 class="sim-title">Product Title</h4>
+                                    <p class="sim-subtitle">Sed interdum sed tortor nec sagittis</p>
+                                </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <a class="sim-thumb" href="#"><img class="media-object" src="/assets/images/logo-thumb86.png" alt="logoname"</a>
+                                <a class="sim-link" href="#">
+                                    <h2 class="sim-title">Product Title</h4>
+                                    <p class="sim-subtitle">Sed interdum sed tortor nec sagittis</p>
+                                </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div><!-- Similar Providers / End-->
+                  </div>
+                    
+                </span>
+               </div>
+            </article>
+          </div>
+        </div>  
     </div>
-
-    <div class="col-sm-4" style="margin-top:20px;">
-      <p><%= raw (@product.commission_title) %></p>
-    </div>
-
-    <div class="col-sm-4" style="margin-top:20px;">
-      <p>Page Views:<%= @product.impressionist_count  %></p>
-      <%= check_links_of @product %>
-    </div>
-  </div>
-
-  <div class="main col-sm-12" style="margin-top:20px;">
-
-    <div class="col-sm-4">
-      <p><em><%= @product.short_description %></em></p>
-      <p><%= raw (@product.content) %></p>
-    </div>
-
-    <div class="col-sm-4">
-      <h4>Tags:</h4>
-      <% @product.tags.each do |tag| %>
-        <p><%= tag.name %></p>
-      <% end %>
-    </div>
-
-    <div class="col-sm-4">
-      <h4>Commission Types:</h4>
-      <% @product.commission_types.each do |commission_type| %>
-        <p><%= commission_type.name %></p>
-      <% end %>
-    </div>
-
-    <div class="col-sm-4">
-      <h2>Logo</h2>
-      <%= image_tag "products/logo-#{@product.id}.jpg", :class => 'product_logo' %>
-    </div>
-
-    <div class="col-sm-8">
-      <h2>Screenshot</h2>
-      <%= image_tag "products/screenshot-#{@product.id}.png", :class => 'product_screenshot' %>
-    </div>
-  </div>
-
-  <%= check_tabs_of @product %>
-
+  </section>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

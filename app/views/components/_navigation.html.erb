@@ -1,3 +1,4 @@
+<%= navigation_switch %>
 <header class="header header-default" style="margin-top: 0px">
   <div class="header-main">
     <div class="container">
@@ -10,9 +11,9 @@
       	      <%= link_to image_tag("/assets/images/logo.png"), home_path %>
       	  </div>
       	</div>
+        
         <div id="main-nav" class="navbar-collapse collapse">
-          <div class="custom"  >
-            <%= navigation_switch %>
+          <div class="custom"  > 
             <ul class="nav navbar-nav ">
               <% if user_signed_in? %>
               <li><%= link_to "Manage user account", edit_user_registration_path %></li>

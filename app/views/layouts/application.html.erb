@@ -3,20 +3,16 @@
 <head>
   <title>Ensend</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <link rel="stylesheet" href="/assets/css/template.min.css">
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/css/librarytemplate.min.css">
   <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="/assets/css/template.min.css">
+  <link rel="stylesheet" href="/assets/css/theme.css">
+  <link rel="stylesheet" href="/assets/css/theme-custom.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <script src="/assets/script/jquery.min.js"></script>
-  <script src="/assets/script/jquery_library.js"></script>
   <script src="/assets/script/bootstrap.min.js"></script>
-  <script src="/assets/script/templatelibrary.js"></script>
-  <script src="/assets/script/register-modal.js"></script>
 </head>
 <body class=" full-width" style="">
   <div class="site-wrapper">	
@@ -24,9 +20,31 @@
   <%= render 'components/navigation' %>
 
   <%= flash_message %>
-
+  
   <%= yield %>
-
   </div>
+  <footer class="footer" id="footer2">
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                    Copyright &copy; 2015  <a href="/./">Ensend.com</a> &nbsp;| &nbsp;All Rights Reserved
+                    </div>
+            <div class="col-sm-6 col-md-8">
+		<div class="social-links-wrapper">
+		    <span class="social-links-txt">Connect with us</span>
+			<ul class="social-links social-links__dark">
+			    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+			    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+			</ul>
+		</div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </footer> 
 </body>
 </html>

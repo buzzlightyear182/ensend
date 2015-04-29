@@ -1,22 +1,22 @@
-<div class="col-sm-2">
-  <%= render 'components/sidebar/user_sidebar' %>
-</div>
-
-<div class="main">
-  <div class="col-sm-10">
-  <h1>Listing Products</h1>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-        <th></th>
-          <th>Title</th>
-          <th>Short description</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <%= render @products %>
-      </tbody>
-    </table>
-  </div>
+<div class="main" role="main" style="background-color: #F9F9F9;">
+  <section class="page-content" style="padding-top: 57px;">
+    <div class="container">
+      <div class="row" id="vg-maincontent">
+        <div class="col-md-12">
+	  <article class="entry ">
+	    <div class="item-page" itemscope itemtype="http://schema.org/Article">
+	    <meta itemprop="inLanguage" content="en-GB" />  
+              <%= render 'components/sidebar/user_sidebar' %>
+               <span itemprop="articleBody">
+		<h1>Product Category</h1><!-- Render Selected Tag Here-->
+                <%= render @products %>
+                  <div class="row">
+                  </div>
+               </span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>

@@ -90,13 +90,21 @@ ActiveRecord::Schema.define(version: 20150424105226) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string   "title",             null: false
+    t.string   "title",                   null: false
     t.string   "subtitle"
     t.text     "short_description"
     t.text     "content"
     t.boolean  "with_affiliate?"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "screenshot_file_name"
+    t.string   "screenshot_content_type"
+    t.integer  "screenshot_file_size"
+    t.datetime "screenshot_updated_at"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
     t.string   "slug"
     t.text     "commission_title"
   end

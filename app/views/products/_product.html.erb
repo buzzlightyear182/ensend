@@ -1,5 +1,30 @@
-<tr>
-  <td><%= image_tag product.logo.url(:thumb, timestamp:false) %></td>
-  <td><h2><%= link_to product.title, product %></h2></td>
-  <td><%= truncate(strip_tags(product.short_description), length: 80) %></td>
-</tr>
+<div class="index-card"> <!-- Product Card / Start -->
+  <%= image_tag "products/logo-#{product.id}.jpg", :class => 'index-logo', :title => product.title, :itemprop => 'image' %>
+    <div class="col-md-4 index-desc">
+	<h2 class="index-title"><%= link_to product.title, product %></h2><!-- Title -->
+	  <p><%= link_to product.short_description, product %></p>
+    </div>
+    <div class="col-md-4 index-comm">
+      <h2 class="comm-header">Commission</h2>
+	<div class="col-md-6 comm-col-li">
+	  <ul class="comm-type-list"><!-- Commission Type -->
+            <% product.commission_types.each do |commission_type| %>
+              <li><i class="<%= commission_type.icon %>">  </i> <%= commission_type.label %></li>
+            <% end %>
+	  </ul>
+	</div>
+        <div class="col-md-6 comm-col">
+	  <%= raw (product.commission_title) %>
+	</div>
+      </div>
+      <div class="index-btn">
+        <%= link_to 'View Details', product, :class=>'btn btn-lg btn-success' %>
+      </div>
+    </div><!-- Product Card / End -->
+
+
+
+
+                          
+                            
+                            
