@@ -132,10 +132,17 @@ margin-bottom: 20px;
 padding-left: 10px;
 font-family: 'Open Sans', 'Muli', sans-serif;
 line-height: 200%;
-font-size: 16px;
+font-size: 14px;
+-webkit-column-count: 1; /* Chrome, Safari, Opera */
+-moz-column-count: 1; /* Firefox */
+column-count: 1;
+}
+@media (min-width: 992px) {
+  .comm-type-list{
 -webkit-column-count: 2; /* Chrome, Safari, Opera */
 -moz-column-count: 2; /* Firefox */
 column-count: 2;
+}
 }
 .product-title{
   font-size: 24px;
@@ -536,4 +543,11 @@ margin-right: 0px;
   border-color: transparent;
 }
 
+
+
+@media (min-width:992px) {
+  h1.index-h1 {
+    font-size: 22px;
+  }
+}
 
