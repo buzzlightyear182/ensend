@@ -1991,7 +1991,7 @@ h2 + .featured-section {
   .featured-item:hover {
     background-color: #F8F8F8;
     opacity: .6;
-    filter: alpha(opacity=60); 
+    filter: alpha(opacity=60);
   }
   .featured-item:hover .featured-icon {
     color: #484848;
@@ -3398,7 +3398,7 @@ h2 + .featured-section {
 }
 /* Loader */
 #qLpercentage {
-  
+
 }
 #preloader-overlay {
   position: fixed;
@@ -3786,7 +3786,7 @@ table.cart-total > tbody > tr > td .amount {
     position: static;
   }
 }
-.bbp-replies .bbp-body .bbp-reply-author .bbp-author-name { 
+.bbp-replies .bbp-body .bbp-reply-author .bbp-author-name {
   margin: 15px 0 0 0;
   display: block;
   color: #2f2f2f;
@@ -3989,14 +3989,14 @@ table.cart-total > tbody > tr > td .amount {
 	width: 100%;
 }
 .custom-home-slider .home-slider-container {
-   background-color: transparent; 
-	background-repeat: no-repeat; 
-	background-image: url("http://ensend.com/images/city2.1_bg_blur.jpg"); 
-	background-size: cover; 
-	background-position: center top;    
-    margin: 0 auto;   
+   background-color: transparent;
+	background-repeat: no-repeat;
+	background-image: url("http://ensend.com/images/city2.1_bg_blur.jpg");
+	background-size: cover;
+	background-position: center top;
+    margin: 0 auto;
     overflow: visible;
-    padding: 0;  
+    padding: 0;
     width: 100%;
 	position: relative;
 }
@@ -4009,7 +4009,7 @@ table.cart-total > tbody > tr > td .amount {
 .custom-home-slider .home-slider-container span {
 	display: block;
 	color: #fff;
-	font-size: 40px;	
+	font-size: 40px;
 	line-height: 70px;
 	font-family: "Open Sans";
 }
@@ -8285,7 +8285,7 @@ h2 + .featured-section {
   .featured-item:hover {
     background-color: #F8F8F8;
     opacity: .6;
-    filter: alpha(opacity=60); 
+    filter: alpha(opacity=60);
   }
   .featured-item:hover .featured-icon {
     color: #484848;
@@ -9548,8 +9548,10 @@ h2 + .featured-section {
 // --------------------------------------------------
 */
 .footer {
-  background: #2f2f2f;
+  background: #212121;
   color: #a3a3a3;
+  position: relative;
+  bottom: 0;
 }
 .footer a {
   color: #fff;
@@ -9692,7 +9694,7 @@ h2 + .featured-section {
 }
 /* Loader */
 #qLpercentage {
-  
+
 }
 #preloader-overlay {
   position: fixed;
@@ -10080,7 +10082,7 @@ table.cart-total > tbody > tr > td .amount {
     position: static;
   }
 }
-.bbp-replies .bbp-body .bbp-reply-author .bbp-author-name { 
+.bbp-replies .bbp-body .bbp-reply-author .bbp-author-name {
   margin: 15px 0 0 0;
   display: block;
   color: #2f2f2f;
@@ -10283,14 +10285,14 @@ table.cart-total > tbody > tr > td .amount {
 	width: 100%;
 }
 .custom-home-slider .home-slider-container {
-   background-color: transparent; 
-	background-repeat: no-repeat; 
-	background-image: url("http://ensend.com/images/city2.1_bg_blur.jpg"); 
-	background-size: cover; 
-	background-position: center top;    
-    margin: 0 auto;   
+   background-color: transparent;
+	background-repeat: no-repeat;
+	background-image: url("http://ensend.com/images/city2.1_bg_blur.jpg");
+	background-size: cover;
+	background-position: center top;
+    margin: 0 auto;
     overflow: visible;
-    padding: 0;  
+    padding: 0;
     width: 100%;
 	position: relative;
 }
@@ -10303,7 +10305,7 @@ table.cart-total > tbody > tr > td .amount {
 .custom-home-slider .home-slider-container span {
 	display: block;
 	color: #fff;
-	font-size: 40px;	
+	font-size: 40px;
 	line-height: 70px;
 	font-family: "Open Sans";
 }
