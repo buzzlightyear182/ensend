@@ -7,7 +7,7 @@
             <article class="entry ">
                <div class="item-page" itemscope itemtype="http://schema.org/Article">
                   <meta itemprop="inLanguage" content="en-GB" />
-                <div class="widget_tag_cloud widget__sidebar" style="margin-bottom: 25px;"> <!-- Tag Buttons / Start--> 
+                <div class="widget_tag_cloud widget__sidebar" style="margin-bottom: 25px;"> <!-- Tag Buttons / Start-->
                   <div class="widget-content">
                     <div class="tagcloud">
                       <% @product.tags.each do |tag| %>
@@ -19,12 +19,12 @@
                   </div>
                 </div><!-- Tag Buttons / End-->
                 <span itemprop="articleBody">
-                  <figure class="alignleft entry-thumb"><!-- Screenshot / Start-->  
+                  <figure class="alignleft entry-thumb"><!-- Screenshot / Start-->
                     <div class="pull-left item-image">
                       <%= image_tag "products/screenshot-#{@product.id}.png", :class => 'caption-image', :title => @product.title, :itemprop => 'image'  %>
                     </div>
                   </figure><!-- Screenshot / End-->
-                  <div class="cta-product"><!-- Product Title Container / Start-->  
+                  <div class="cta-product"><!-- Product Title Container / Start-->
                     <h2 class="product-title"><%= @product.title %></h2>
                       <div class="cta-txt">
                         <p><%= @product.subtitle %></p>
@@ -36,7 +36,7 @@
                             <li><i class="<%= commission_type.icon %>">  </i> <%= commission_type.label %></li>
                             <% end %>
                           </ul>  <!-- Commission Types / End-->
-                        </div>  
+                        </div>
                       </div>
                       <%= check_links_of @product %><!-- Product Links-->
                   </div><!-- Product Title Container / End-->
@@ -44,21 +44,21 @@
                     <div class="col-md-12 content-width">
                       <div class="tabs">
                         <ul class="nav nav-tabs tab-header">
-                          <li class="active"><a href="#tab-1" data-toggle="tab">Details</a></li><!-- Tab Names-->
-                          <li><a href="#tab-2" data-toggle="tab">Commissions Details</a></li><!-- Tab Names-->
-                          <li><a href="#tab-3" data-toggle="tab">Pricing Plan</a></li><!-- Tab Names-->
+                          <li class="active"><a href="#tab-1" data-toggle="tab"><%= Tab.first.name %></a></li><!-- Tab Names-->
+                          <li><a href="#tab-2" data-toggle="tab"><%= Tab.second.name %></a></li><!-- Tab Names-->
+                          <li><a href="#tab-3" data-toggle="tab"><%= Tab.third.name %></a></li><!-- Tab Names-->
                         </ul>
                         <div class="tab-content">
                           <%= raw (@product.content) %>
                         </div>
                       </div>
                     </div>
-                  
-                  
+
+
                   <div class="sim-header"><!-- Similar Providers / Start-->
                     <h2 class=>Similar Providers:</h2>
                     </div>
-                    <div class="sim-provider table-responsive"> 
+                    <div class="sim-provider table-responsive">
                         <table class="table table-striped ">
                             <tr>
                                 <td>
@@ -99,12 +99,12 @@
                         </table>
                     </div><!-- Similar Providers / End-->
                   </div>
-                    
+
                 </span>
                </div>
             </article>
           </div>
-        </div>  
+        </div>
     </div>
   </section>
 </div>
