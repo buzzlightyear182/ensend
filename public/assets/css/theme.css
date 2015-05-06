@@ -426,19 +426,16 @@ body.boxed .header-main {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
   .fhmm .navbar-collapse .navbar-nav li.active > a,
-  .fhmm .navbar-collapse .navbar-nav li.active > a:hover,
-  .fhmm .navbar-collapse .navbar-nav li.active > a:focus {
+  .fhmm .navbar-collapse .navbar-nav li.active > a:hover {
     background: none !important;
     color: #fff;
   }
   .fhmm .navbar-collapse .navbar-nav li.active > a:before,
-  .fhmm .navbar-collapse .navbar-nav li.active > a:hover:before,
-  .fhmm .navbar-collapse .navbar-nav li.active > a:focus:before {
+  .fhmm .navbar-collapse .navbar-nav li.active > a:hover:before{
     background: none;
   }
   .fhmm .navbar-collapse .navbar-nav li.open > a,
-  .fhmm .navbar-collapse .navbar-nav li.open > a:hover,
-  .fhmm .navbar-collapse .navbar-nav li.open > a:focus {
+  .fhmm .navbar-collapse .navbar-nav li.open > a:hover {
     background: none !important;
     color: #fff;
   }
@@ -489,35 +486,29 @@ body.boxed .header-main {
     -webkit-transition: 0.2s;
     transition: 0.2s;
   }
-  .fhmm .navbar-collapse .navbar-nav > li > a:hover,
-  .fhmm .navbar-collapse .navbar-nav > li > a:focus {
+  .fhmm .navbar-collapse .navbar-nav > li > a:hover {
     background: #fff;
     color: #2f2f2f;
   }
-  .fhmm .navbar-collapse .navbar-nav > li > a:hover:before,
-  .fhmm .navbar-collapse .navbar-nav > li > a:focus:before {
+  .fhmm .navbar-collapse .navbar-nav > li > a:hover:before{
     background: #dc2a0b;
   }
   .fhmm .navbar-collapse .navbar-nav > li.active > a,
-  .fhmm .navbar-collapse .navbar-nav > li.active > a:hover,
-  .fhmm .navbar-collapse .navbar-nav > li.active > a:focus {
+  .fhmm .navbar-collapse .navbar-nav > li.active > a:hover{
     background: #fff;
     color: #2f2f2f;
   }
   .fhmm .navbar-collapse .navbar-nav > li.active > a:before,
-  .fhmm .navbar-collapse .navbar-nav > li.active > a:hover:before,
-  .fhmm .navbar-collapse .navbar-nav > li.active > a:focus:before {
+  .fhmm .navbar-collapse .navbar-nav > li.active > a:hover:before {
     background: #dc2a0b;
   }
   .fhmm .navbar-collapse .navbar-nav > li.open > a,
-  .fhmm .navbar-collapse .navbar-nav > li.open > a:hover,
-  .fhmm .navbar-collapse .navbar-nav > li.open > a:focus {
+  .fhmm .navbar-collapse .navbar-nav > li.open > a:hover {
     background: #fff;
     color: #2f2f2f;
   }
   .fhmm .navbar-collapse .navbar-nav > li.open > a:before,
-  .fhmm .navbar-collapse .navbar-nav > li.open > a:hover:before,
-  .fhmm .navbar-collapse .navbar-nav > li.open > a:focus:before {
+  .fhmm .navbar-collapse .navbar-nav > li.open > a:hover:before{
     background: #dc2a0b;
   }
 }
@@ -6783,35 +6774,29 @@ body.boxed .header-main {
     -webkit-transition: 0.2s;
     transition: 0.2s;
   }
-  .fhmm .navbar-collapse .navbar-nav > li > a:hover,
-  .fhmm .navbar-collapse .navbar-nav > li > a:focus {
+  .fhmm .navbar-collapse .navbar-nav > li > a:hover {
     background: #fff;
     color: #2f2f2f;
   }
-  .fhmm .navbar-collapse .navbar-nav > li > a:hover:before,
-  .fhmm .navbar-collapse .navbar-nav > li > a:focus:before {
+  .fhmm .navbar-collapse .navbar-nav > li > a:hover:before {
     background: #dc2a0b;
   }
   .fhmm .navbar-collapse .navbar-nav > li.active > a,
-  .fhmm .navbar-collapse .navbar-nav > li.active > a:hover,
-  .fhmm .navbar-collapse .navbar-nav > li.active > a:focus {
+  .fhmm .navbar-collapse .navbar-nav > li.active > a:hover {
     background: #fff;
     color: #2f2f2f;
   }
   .fhmm .navbar-collapse .navbar-nav > li.active > a:before,
-  .fhmm .navbar-collapse .navbar-nav > li.active > a:hover:before,
-  .fhmm .navbar-collapse .navbar-nav > li.active > a:focus:before {
+  .fhmm .navbar-collapse .navbar-nav > li.active > a:hover:before {
     background: #dc2a0b;
   }
   .fhmm .navbar-collapse .navbar-nav > li.open > a,
-  .fhmm .navbar-collapse .navbar-nav > li.open > a:hover,
-  .fhmm .navbar-collapse .navbar-nav > li.open > a:focus {
+  .fhmm .navbar-collapse .navbar-nav > li.open > a:hover {
     background: #fff;
     color: #2f2f2f;
   }
   .fhmm .navbar-collapse .navbar-nav > li.open > a:before,
-  .fhmm .navbar-collapse .navbar-nav > li.open > a:hover:before,
-  .fhmm .navbar-collapse .navbar-nav > li.open > a:focus:before {
+  .fhmm .navbar-collapse .navbar-nav > li.open > a:hover:before {
     background: #dc2a0b;
   }
 }
