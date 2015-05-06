@@ -87,7 +87,7 @@ production:
   database: ensend_production
   adapter: postgresql
   encoding: unicode
-  username: root
+  username: ensend
   password: <%= ENV['DB_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
 
