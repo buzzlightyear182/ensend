@@ -84,10 +84,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  database: ensend_production
+  database: app
   adapter: postgresql
   encoding: unicode
-  username: ensend
+  username: root
   password: <%= ENV['DB_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
 
