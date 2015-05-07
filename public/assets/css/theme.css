@@ -3982,7 +3982,7 @@ table.cart-total > tbody > tr > td .amount {
 .custom-home-slider .home-slider-container {
    background-color: transparent;
 	background-repeat: no-repeat;
-	background-image: url("http://ensend.com/images/city2.1_bg_blur.jpg");
+	background-image: url("../assets/images/city2.1_bg_blur.jpg");
 	background-size: cover;
 	background-position: center top;
     margin: 0 auto;
@@ -4005,7 +4005,7 @@ table.cart-total > tbody > tr > td .amount {
 	font-family: "Open Sans";
 }
 .custom-home-slider .home-slider-container .bg-transparent {
-	background: url("http://ensend.com/images/transparent.png") repeat scroll center center transparent;
+	background: url("../assets/images/transparent.png") repeat scroll center center transparent;
 }
 #register-btn span {
 	padding-right:10px;
