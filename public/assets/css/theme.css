@@ -3982,7 +3982,6 @@ table.cart-total > tbody > tr > td .amount {
 .custom-home-slider .home-slider-container {
    background-color: transparent;
 	background-repeat: no-repeat;
-	background-image: url("http://ensend.com/images/city2.1_bg_blur.jpg");
 	background-size: cover;
 	background-position: center top;
     margin: 0 auto;
@@ -4005,7 +4004,7 @@ table.cart-total > tbody > tr > td .amount {
 	font-family: "Open Sans";
 }
 .custom-home-slider .home-slider-container .bg-transparent {
-	background: url("http://ensend.com/images/transparent.png") repeat scroll center center transparent;
+	background: repeat scroll center center transparent;
 }
 #register-btn span {
 	padding-right:10px;
@@ -4019,7 +4018,7 @@ table.cart-total > tbody > tr > td .amount {
 }
 
 
- .header .logo h1, .header .logo h2, .tp-caption.stability_large_white, .tp-caption.stability_large_white_bg, .error-title, #qLpercentage, .title-accent > h3 > span { font-family: 'Anton', sans-serif; }body, .tp-caption.stability_verysmall_white_mw, .tp-caption.modern_medium_white, .widget .title, .panel-group .panel-title { font-family: 'Muli', sans-serif; }.fhmm .navbar-collapse .navbar-nav > li > a, .dropcap, .tp-caption.large_bold_white, .tp-caption.mediumwhitebg, .tp-caption.finewide_small_white, .rsThumb, .ls-caption1, .ls-caption3, table.cart-total > tbody > tr > th, .bbp-forums .bbp-header .forum-titles, .bbp-replies .bbp-body .bbp-reply-author .bbp-author-name, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger, .table > thead > tr > th, .pricing-table .plan .pricing-head .price, .progress-label { font-family: 'Oswald', sans-serif; }
+ .header .logo h1, .header .logo h2, .tp-caption.stability_large_white, .tp-caption.stability_large_white_bg, .error-title, #qLpercentage, .title-accent > h3 > span { font-family: 'Anton', sans-serif; }body, .tp-caption.stability_verysmall_white_mw, .tp-caption.modern_medium_white, .widget .title, .panel-group .panel-title { font-family: 'Muli', sans-serif; }.fhmm .navbar-collapse .navbar-nav > li > a, .dropcap, .tp-caption.large_bold_white, .tp-caption.mediumwhitebg, .tp-caption.finewide_small_white, .rsThumb, .ls-caption1, .ls-caption3, table.cart-total > tbody > tr > th, .bbp-forums .bbp-header .forum-titles, .bbp-replies .bbp-body .bbp-reply-author .bbp-author-name, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger, .table > thead > tr > th, .pricing-table .plan .pricing-head .price, .progress-label { font-family: 'Roboto Condensed', sans-serif; }
 
 /* Theme Elements - Table of Content
 ==================================================
@@ -10333,7 +10332,7 @@ a:hover {
 */
 @media all and (min-width: 992px) {
   .fhmm .navbar-collapse .navbar-nav > li > a:hover:before,
-  .fhmm .navbar-collapse .navbar-nav > li > a:focus:before {
+  .fhmm .navbar-collapse .navbar-nav > li > f:before {
     background: #27ae60;
   }
   .fhmm .navbar-collapse .navbar-nav > li.active > a:before,
