@@ -1,5 +1,5 @@
 <div class="index-card"> <!-- Product Card / Start -->
-  <%= image_tag "products/logo-#{product.id}.jpg", :class => 'index-logo', :title => product.title, :itemprop => 'image' %>
+  <%= link_to image_tag("products/logo-#{product.id}.jpg"), product, :class => 'index-logo', :title => product.title, :itemprop => 'image' %>
   <div class="col-md-4 index-desc">
     <h2 class="index-title"><%= link_to product.title, product %></h2><!-- Title -->
     <p><%= link_to product.short_description, product %></p>

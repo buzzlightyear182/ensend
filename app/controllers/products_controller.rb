@@ -1,11 +1,12 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show]
-  before_action :authenticate_user!, only: [:index, :show]
+  before_action :authenticate_user!, only: [:show]
 
   # GET /products
   # GET /products.json
   def index
     @products = Product.all
+    @title = "Featured Products and Services"
   end
 
   # GET /products/1

@@ -1,5 +1,6 @@
 <ul><!-- Category -->
-  <li class="menu-cat"><a href="#"><%= category.name %></a>
+  <li class="menu-cat">
+    <%= link_to category.name, category %>
     <%= render partial: 'components/sidebar/tag', collection: category.tags %>
   </li>
 </ul>

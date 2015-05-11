@@ -3,14 +3,15 @@
     <div class="container">
       <div class="row" id="vg-maincontent">
         <div class="col-md-12">
-	  <article class="entry ">
-	    <div class="item-page" itemscope itemtype="http://schema.org/Article">
-	    <meta itemprop="inLanguage" content="en-GB" />
+	         <article class="entry ">
+      	    <div class="item-page" itemscope itemtype="http://schema.org/Article">
+      	    <meta itemprop="inLanguage" content="en-GB" />
               <%= render 'components/sidebar/user_sidebar' %>
                <span itemprop="articleBody">
-		<h1 class="index-h1" style="text-transform: none; font-family: Muli, sans-serif; font-weight: bold; ">
-                  Featured Apps and Services</h1><!-- Render Selected Tag Here-->
-                <%= render @products %>
+              		<h1 class="index-h1" style="text-transform: none; font-family: Muli, sans-serif; font-weight: bold;">
+                    <%= @title %>
+                  </h1><!-- Render Selected Tag Here-->
+                    <%= render @products %>
                   <div class="row">
                   </div>
                </span>
