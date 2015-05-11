@@ -566,3 +566,10 @@ body.full-width {
 .modal-dialog.custom{
   margin-top: 30px;
 }
+.row-title{
+  font-weight: bold;
+}
+.table > tbody > tr > th {
+  text-align: center;
+  
+}
