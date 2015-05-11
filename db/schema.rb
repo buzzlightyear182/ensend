@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150424105226) do
+ActiveRecord::Schema.define(version: 20150511123412) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,15 +90,16 @@ ActiveRecord::Schema.define(version: 20150424105226) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string   "title",             null: false
+    t.string   "title",                                                   null: false
     t.string   "subtitle"
     t.text     "short_description"
     t.text     "content"
-    t.boolean  "with_affiliate?"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.boolean  "with_affiliate"
+    t.datetime "created_at",                                              null: false
+    t.datetime "updated_at",                                              null: false
     t.string   "slug"
     t.text     "commission_title"
+    t.decimal  "ranking",           precision: 9, scale: 3, default: 0.0
   end
 
   create_table "products_and_commission_types", id: false, force: :cascade do |t|

@@ -3,11 +3,13 @@ class Admin::CountersController < ApplicationController
 
   def update
     check_page_count @count
+    @product.update_ranking
     redirect_to @count.link.url
   end
 
   def reset
     Impression.where(impressionable_type: "Counter", controller_name: "counters", impressionable_id: @count.id).destroy_all
+    @product.update_ranking
     redirect_to edit_admin_product_path(@count.link.product)
   end
 
@@ -15,6 +17,7 @@ class Admin::CountersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_count
       @count = Counter.find(params[:id])
+      @product = @count.link.product
     end
 
 end
