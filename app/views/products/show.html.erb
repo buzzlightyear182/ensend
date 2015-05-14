@@ -12,7 +12,7 @@
                     <div class="tagcloud">
                       <% @product.tags.each do |tag| %>
                       <span itemprop="keywords">
-                        <a href="#"><%= tag.name %></a>
+                        <%= link_to tag.name, tag %>
                       </span>
                       <% end %>
                     </div>
